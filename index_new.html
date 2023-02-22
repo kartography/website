@@ -36,9 +36,33 @@ THE SOFTWARE.-->
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          if (n > x.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex-1].style.display = "block";  
+        }
+    </script>
+
+  
+
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -59,12 +83,11 @@ THE SOFTWARE.-->
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-heading"><p>Kartography Community Interest Company</p>
-                    
-                </div>
+                <div class="masthead-heading"><p>Kartography Community Interest Company</p></div>
                 <div class="masthead-subheading">
                 <p style="font-size: smaller;">The study and practice of making and using knowledge and cognitive maps</p>
                 <p style="font-size: smaller;">The home of</p><p><img width="30%" src="./images/researchspacelogo.png"/></p>
+                <div class="masthead-heading"><p>IN CONSTRUCTION</p></div>
             </div>        
                 
         </header>
@@ -161,12 +184,10 @@ THE SOFTWARE.-->
                             represent and author the data depending on its nature.   
                         </p>
                     </div>
-                   
-
-                </div>
+                  </div>
             </div>
         </section>
-        <section class="page-section" id="Case Studies">
+        <section class="page-section" id="Case Studies" style="padding:0%">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Case Studies </h2>
 
@@ -175,41 +196,98 @@ THE SOFTWARE.-->
        
             </div>
         
-            <div class="flex-container">
+            <div class="flex-container" style="padding:0%">
                 
-                    <div class="flex-co11">
+                    <div class="flex-co11" style="padding:0%">
                         
-                        <h4 class="my-3">The Collection Care Department</h4>
-                        <p class="text-muted">
-                            The Conservation Care department CCD at the The National Archives (TNA), 
-                            like other similar organisations, used a database information system which recorded the administrative aspects
-                            of their work incorporating records on collection items, condition assessments, treatments, surveys, and  loan and exhibition information. 
-                            However, it only dealt with the administrative aspects of the work. Depsite the collaboration between conservation and science, the system was 
-                            not used buythe scientists because it did reflect their processes or derived knowledge, but this was equally tru of the conservators who regular 
-                            particulated in scientific work and projects. It didn’t reflect actual working practices or developing skills and methods
-                            supported by their practitioner-researcher approach. Neither did it record content in a way useful for internal knowledge building, training, decision making
-                            or collaboration.
-        
-        
-                        </p>
-                    </div>
-                
-                <div class="flex-co12">
-                       
-                        <h4 class="my-3">The Collection Care Department</h4>
-                        <p class="text-muted"> The Conservation Care department CCD at the The National Archives (TNA), 
-                            like other similar organisations, used a database information system which recorded the administrative aspects
-                            of their work incorporating records on collection items, condition assessments, treatments, surveys, and  loan and exhibition information. 
-                            However, it only dealt with the administrative aspects of the work. Depsite the collaboration between conservation and science, the system was 
-                            not used buythe scientists because it did reflect their processes or derived knowledge, but this was equally tru of the conservators who regular 
-                            particulated in scientific work and projects. It didn’t reflect actual working practices or developing skills and methods
-                            supported by their practitioner-researcher approach. Neither did it record content in a way useful for internal knowledge building, training, decision making
-                            or collaboration.</p>
-                    
-                </div>
-            </div>
+                        <h4 class="my-3">The Collection Care Department (CCD)</h4>
+                            <p class="text-muted">
+                                The TNA's CCD role is to ensure access to the TNA collections through preservation and display, innovative sector-leading treatment and research, 
+                                documentation and environmental management. The department had develeoped two key strategy objectives. The first was based on a practitioner-researcher approach in that 
+                                the traditional division between conservation and science is viewed as anachronistic and progressive development of the department relied on a holistic and integrated
+                                approach. Knowledge was derived from all aspects of the departments work. 
+                            </p>
 
+
+                        <h4 class="my-3">The Existing System</h4>
+
+                            <p class="text-muted">
+                                Like most organisational database systems (for example, collection and conservation) it was considered largely administrative focussing on the basic throughput of 
+                                conservation work going through the department. In hindsight, it provided very little knowledge about the actual processes, skills, and methods used with the varied 
+                                items in the TNA collection. There were few benefits in terms of understanding how the department worked and developed. Most of the actual knowledge was spread across different 
+                                types of repository, mostly documents and spreadsheets, but disconnected and underused. The database had been 
+                                extended over time but these extensions were pragmatic and not well integrated generating further fragmentation. The increasing gap between what was an essentially 
+                                static system and the actual workings of the department are typical. Therefore the objective for the TNA project was to create a system that could grow with the 
+                                department and representing and connecting all the knowledge it generated, creating benefits internally, but also crucially, externally. By reforming this aspect of their work it 
+                                could underpin their strategy and reach more people.  
+                            </p>
+
+
+                        <h4 class="my-3">An Evolutionary Approach</h4>
+                        <p class="text-muted">Legacy databases can be difficult and expensive to change because of their technical inflexibility. Semantics and logic are built into 
+                            the software, not the data, making the system dependent on technicians not invested in the content. The hidden cost is that, in not reflecting the reality of the department’s 
+                            processes and strategy, it created an overhead. Data went into the 
+                            system but had no real objective and therefore people were servicing a system which provided little return at any level. However, CCD did not have the time necessary to 
+                            stop and conduct a detailed review of the department in one major exercise. Using ResearchSpace meant that an evolutionary route was possible. Initially the old data, which was 
+                            still required, was cleaned and migrated to the CIDOC CRM, creating semantically explicit information in a flexible structure - a graph. Semantic data is higher quality 
+                            and is more precise but works within a flexible model which can be influenced more easily by subject experts themselves. 
+                            Once the system was migrated to the new framework it could be developed collaboratively with a common goal to be transparent, educational 
+                            and better address new challenges. Disruption to the department was kept to a minimum and the system simply continued to change and grow incrementally. 
+                            The data clean and semantic transformation was completed incrementally over a period of 4 weeks. The system was created from scratch in a similar time span providing
+                            a custom system without the usual timescale and resources. Driven from the data, not the software, a custom system could be created without the need for custome support. The 
+                            Key ingredient was kartography's understanding of the subject area, not just semantic technology.    
+
+                         </p>
+
+                         <h4 class="my-3">People</h4>
+
+                         <p class="text-muted">
+                            Once a working system was available it was incorporated into the department immediately. This allowed the space for a fuller information exchange 
+                            about how the department worked, how different sections within the department collaborated and how the department collaborated within the organisation 
+                            and externally. It also allowed Kartography to describe how the new system operated and the possibilities available to people for its use in supporting 
+                            the current practices of the department and to improve the system to make it more relevant, gradually introducing the concepts behind semantic data 
+                            and new ways of thinking about data.
+      
+                         </p>
+
+                         <h4 class="my-3">Integration</h4>
+
+                         <p class="text-muted">
+                            CCD used the records from the TNA Discovery system which documents the archive using the EAD system. The ResearchSpace system is able to connect
+                            with API's and databases and dynamically convert them to a semantic format. A ResearchSpace - Discovery interface was provided that allows CCD to 
+                            find and import records from Discovery maintaining a link between the two. This also allows CCD to augment the records with material, scientific and historical 
+                            information including social and historical significant which is highly relevant to preservation and conservation processes.  
+
+      
+                         </p>
+
+                          <h4 class="my-3">Evolving the System</h4>
+
+                         <p class="text-muted">
+                            A review was undertaken in the context of the CCD strategy and a new version of the system was completed which incorporated an interconnected interface
+                            based on a project approach. However, projects are not simply separate standalone pieces of work. Projects are able to be linked allowing past work to 
+                            inform future work and allow a provenance of methods and techniques that can be traced. Collection items and the activities around them have a life which 
+                            can now be traced and used to understand change and new developments. Complexity is supported by allowing CCD to break archive items up into components 
+                            and features from which specific regions and points can be identified and used for precise representation of assessments, analysis, research and treatments that they carry out without resorting to interpretating text 
+                            fields which previously were the only way to describe details. 
+                         </p>
+                    
+                        </div>
+                        <div class="flex-co12">
+                            <p><a title="The National Archives (United Kingdom), CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Banners_at_entrance_to_The_National_Archives.jpg"><img width="50%" alt="Banners at entrance to The National Archives" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Banners_at_entrance_to_The_National_Archives.jpg/512px-Banners_at_entrance_to_The_National_Archives.jpg"></a>
+                            <a title="The National Archives UK, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:A_corridor_of_files_at_The_National_Archives.jpg"><img width="30%" alt="A corridor of files at The National Archives" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/A_corridor_of_files_at_The_National_Archives.jpg/256px-A_corridor_of_files_at_The_National_Archives.jpg"></a></p>
+                            <img style="padding:20px" width=100% src="assets/img/Knowledge Base.png">
+                            <img style="padding:20px" width="100%" src="assets/img/casestudy/region.png">    
+                        </div>        
+            </div>
          </section>  
+         <section class="page-section" style="padding:0%;padding-bottom:3%" id="The System">
+            <div class="flex-container">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTQH7ncnnqG-fhMnYib--zjeiUWUdT2VWrK-DlxG49rWS0IaetLEatTE-61Nqn3vsjyTL8adnd8DPD3/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+              </div>
+
+
+         </section>
         
         
         
