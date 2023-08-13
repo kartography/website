@@ -1,110 +1,265 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Landing Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Layout with Header</title>
+<style>
+
+
+  body {  
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+* {
+    border: 0px solid #ccc; 
+}
+
+.sideimage {
+
+text-align: right;	
+padding-bottom: 1%;
+padding-right: 10%;
+padding-top: 1%;
+
+
+}
+.title {
+
+font-size: 5em;
+text-align: center;
+
+}
+
+.subtitle {
+text-align: center;
+font-family: monospace;
+
+}
+    
+
+  .header1 {
+    background-color: white;
+  
+    padding: 0px;
+    margin:auto;
+    color: black;
+    width: 50%;
+  }
+
+.header2 {
+    background-color: white;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    color: black;
+    }
+  
+  .container {
+        width:80%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    
+    padding-top: 2%;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding:0;
+    
+    
+    width:auto;
+    
+  }
+
+  .row {
+    
+     flex-wrap:wrap;
+    flex: 1;
+    text-align: left;
+    padding:0;
+    
+    
+    font-family: monospace;
+    font-size: 1.5em;
+    margin:1%;
+  }
+  
+  .headerimage {
+padding:0;
+  margin-left: auto;
+margin-right: auto;
+  
+     
+  }
+  
+.subtitle {
+
+font-size:2em ;
+text-align: center;
+
+}  
+.whatis {
+font-family: monospace;
+text-align: left;
+
+}
+.nav {
+font-size:1em ;
+text-align: center;
+
+} 
+ 
+ .topnav {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  font-family: monospace;
+  
+  
+  
+}
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+</style>
 </head>
-
-
-
 <body>
-<div class="page">
-
-    <div class="titlecontainer">
-     
-         <div class="titlecolumn"><img src="images/logo.png"  height="100px"/></div>
-           
-        </div> 
-        <div class="subtitlecontainer">
-     
-            <div class="titlesub">
-            <br/><p><b>The study and practice of making and using knowledge and cognitive maps</b></p>
-           </div>
-        </div>
-
-
-
-        <div class="container">
-        <div class="column">
-           
-            <div class="body"><h1>Grow your knowledge</h1> 
+  <div class="header1">
+    <div class="title"><img src="./images/kartlogo1.png" width=50% alt=""></div>
+            <div class="subtitle">The Home of ResearchSpace</div>
+            <div class="topnav">
             
-                <p>Knowledge is valuable resource but only if it continually 
-                expands and evolves.<br></br>Unlike databases, knowledge systems provide a means to 
-                grow knowledge using semantic data. Semantic data is meaningful, 
-                precise and provides greater insight.<br></br>It improves processes and 
-                decision making and interconnects different systems  providing 
-                an effective partnership between people and computers.  
-                <br></br>Using the ResearchSpace knowledge base system Kartography also addresses
-                </p>
-                <p> 
-                <ul>
-                    <li>Equality and Diversity in data through contextualisation  </li>
-                    <li> Combining Quantity with Quality  </li>
-                    <li>Complex,  dynamic, and interconnected processes </li>
-                    <li>Provenance of knowledge</li>
-                </ul>
-                
-            </p>
-        </div>
-            </div>
+            <a  href="./home.html">Home</a>
+  <a href="./researchers.html">Researchers</a>
+  <a href="./knowledge organisations">Knowledge Organisations</a>
 
-            <div class="column" style="width:20%">
-                
-            </div>   
-        
+  <a href="./researchspace.html">ResearchSpace in detail</a>
+
+    <a href="./membership">Membership</a>
+  <a href="./about.html" class="split">About and Contact</a>       </div>	
         
     
+    
+    </div>
+    
+    
+
+ <div class="header2">
+
+</div>
+  </div>
+  <div class="container">
     <div class="column">
-        <div class="body" style="font-weight: bold;font-size: 120%;">
-        <blockquote class="quote"> <p>“If knowledge isn’t challenged 
-            to grow, it disappears fast”</p> 
-            
-            <p>Peter Drucker</p></blockquote>
-    </div>   
+      <div class="row"> <div class="sideimage"> <img width=30% src="./images/kartographymind.png" alt=""> </div></div>
+<div class="row"> <div class="sideimage"><img  width=30% src="./images/saturnbrain.png"></div></div>	     
+      <div class="row"> <div class="sideimage"><img width=30% src="./images/museumcogs.png" alt=""> </div></div>
+     
+         <div class="row"> <div class="sideimage"><img width=30% src="./images/connection.png" alt=""></div></div>
+          <div class="row"> <div class="sideimage"><img width=30%  src="./images/micro-macro.png" alt=""></div></div>
+     </div>
+     
+    <div class="column">
+     <div class="row"><b>Who are Kartography?</b>
+     <p>Kartography are an interdisciplinary team drawing upon extensive experience of working within knowledge organisations including the Royal Academy of Arts, 
+     the British Museum and the National Gallery. Kartography expertise includes historical 
+     and social science methodology, computer science, knowledge systems, AI, Semantic Web and Linked Data and process analysis. It also includes specialisms like Ethnography and Anthropology, 
+     Egyptology, Conservation and Conservation Science, 
+     and Art History. This allows Kartography together with the ResearchSpace knowledge system developed by the team, to add significant value to knowledge projects providing interdisciplinary expertise. The Kartography
+     organisation is a Community Interest Company - a non-profit social enterprise. 
+    </p>
+     
+     </div>
+     
+      <div class="row">
+      <p><b>What is ResearchSpace?</b></p>
+       <p>ResearchSpace is a progressive alternative and successor to the database. It is a semantic knowledge base system 
+       designed to support knowledge processes and create meaningful data more closely aligned with our thinking and 
+       reality. It can be used in research, cultural heritage organisations, and any other organisations for which 
+       dynamic knowledge building is an important part of its processes. ResearchSpace is an open source system with 10 years of
+       research and development funded by the Mellon Foundation, New York. </p>
 
-
-    </div>
-</div>
+        <p>ResearchSpace has been designed to address many of the problems associated with representing complex data 
+        that databases are not designed to address.</p></div>
     
-</div>
-
-<div class="nextpage">
-    <h2>Data to knowledge transformation services</h2>
-    
-    <p>Kartography can model and transform data into a richer and 
-    flexible semantic form that brings out the explicit meaning and relationships
-     hidden in data. This opens up opportunities for continually expanding the model 
-     to meet new demands and questions. This work often involves correcting 
-     data issues commonly embedded in traditional database systems which requires
-      correction for a precise semantic environment. This consultancy is usually 
-      made available when using our knowledge base services. </p>
-      </div>
-
-      <div class="nextpage">
-      <h2>Knowledge Process Consultancy </h2> 
-
-      <p>Kartography can work with you to understand your knowledge processes 
-      providing experience and expertise to inform a new knowledge base. 
-      Often existing processes have been influenced to service an existing database system. 
-      Kartography can help re-evaluate existing processes to inform and align with a new 
-      Since a knowledge base system can evolve over time, this work can be informed by longer 
-      term strategies or reviews of existing processes which have been determined by a traditional database. </p> 
+        <div class="row">
+         <p><b>Why are databases problematic for knowledge processes?</b></p>
+       <p>Databases were not designed for complex semantic content. They were invented for the processing of 
+       commercial data used in supply chains. They had no need to include context because the scope of
+       use in their design was relatively narrow. The need to integrate with other organisations was not a priority at the time but as 
+       data integration became important for commercial processes databases created a problem even for the narrow 
+       types of data they processed. A huge amount of complexity is required to perform relatively simple 
+       integrations. Databases are essentially static and functional. An example is produced here.</p></div>
+       
+        <div class="row">
+         <p><b>How does ResearchSpace work?</b></p>
+         <p>In order for different system to effectively communicate their need a common understanding. When we communicate
+         we use different words and phrases to describe similar things. When information is processed through computers this
+         can cause a serious problem and overhead. Every organisation is individual and has different 
+         perspectives and traditions, but on the other hand their is a greater need to integrate internally and externally on an interdisciplinary basis. 
+         Knowledge system work, not by limiting different ways of describing world but by
+         providing a framework that identifies key universal concepts with empirical references to reality. 
+         In this way the human operator and the computer have a precise framework for agreement. This framework is 
+         highly meaningful. Instead of a database that only stores a field label and a value with a 
+         data type, ResearchSpace stores a semantic network of processes typed to real world concepts. This creates 
+         a highly effective knowledge base of information which can be dynamically extended and exchanged. </p>	 		 	  
+        </div>
+              
+       <div class="row"><b>Why is ResearchSpace more effective than a database?</b>
+       
+        ResearchSpace solves some significant problems associated with databases, whether doing research or working in 
+        a skilled knowledge environment dependent on changing information. Databases have static models and no formal data semantics. They
+        are designed to control a particular static set of information in quantity. However, knowledge is not a 
+        static concept. In both research and in many skilled jobs people are necessarily building knowledge far beyond
+        these static models. As such they start using other mechanisms to record that additional knowledge which is 
+        more important to their work than that recorded by the database. This creates a significant overhead and
+        an inefficiency invisible to the organisation.
+        
+        Information becomes fragmented which prevents individuals and organisations from working in an 
+        effective and connected way, and building valuable knowledge which otherwise fades away. Peter Drucker the organisational consultant 
+        who coined the phrase knowledge society, said that: “If knowledge isn’t challenged to grow, it disappears fast.” This is highly costly to all organisations
+        and projects.
+      
+         
+                 
+       
+       
+       
+       </div>			  
+              
+              
+              
+              </div>
     </div>
 
-    <div class="nextpage">
-        <h2>  Maximising Experience </h2>
+      
+ 
+  
+    </div>
+<div class="footer">
 
-<p>Kartography designs interfaces that reflect thinking processes. 
-They can be changed and evolve to reflect changes and using the ResearchSpace 
-system can allow users to generate their own models of information based on changing knowledge. 
-The ResearchSpace system is designed to bring out the meaning in the data rather than provide 
-its own semantics and this separation allows a flexible system for user experience which can also evolve.</p>
+Kartography Community Interest Company is a private company limited by guarantee registered as a Community Interest Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
+
+Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
+</div>
 </body>
-
-
 </html>
+ 
