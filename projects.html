@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
@@ -152,72 +153,82 @@
 
 .footer
 {
-  font-size: 0.75em;
-  width:70%;
-  margin:auto;
+  font-size: 0.5em;
 
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stv-radio-tabs-wrapper {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #428bca;
+  padding: 0 10px;
+  position: relative;
+}
+
+input.stv-radio-tab {
+  position: absolute;
+  left: -99999em;
+  top: -99999em;
+
+    & + label {
+   	 cursor: pointer;
+   	 float: left;
+   	 border: 1px solid #aaa;
+   	 border-bottom: 0;
+   	 background-color: #fff;
+   	 margin-right: -1px;
+   	 padding: .5em 1em;
+   	 position: relative;
+   	 
+ 	&:hover {
+   	background-color: #eee;
+ 	}
+    }
+
+    &:checked + label {
+   	 box-shadow: 0 3px 0 -1px #fff,
+   	inset 0 5px 0 -1px #13CD4A;
+   	 background-color: #fff;
+ 	border-color: #428bca;
+   	 z-index: 1;
+    }
+}
+
+
+
   </style>
 </head>
 
 <body>
-	<div class="header1">
-		<div w3-include-html="content.html"></div>
-		<div class="title"><a href="home.html" class="image-link"><img src="./images/kartlogo1.png" width=60% alt=""><a></div>
-		<div class="subtitle">The Home of ResearchSpace</div>
-		<div class="topnav">
-	
-		  <a href="./home.html">Home</a>
-				<a href="./researchers.html">Academic Research</a>
-				<a href="./knowledge_organisations.html ">Knowledge Organisations</a>
-	
-				<a href="./researchspace.html">ResearchSpace in detail</a>
-	
-				<a href="./membership.html">Membership</a>
-				<a href="./about.html" class="split">About and Contact</a>
-		</div>
-	  </div>
+
+    <div class="stv-radio-tabs-wrapper">
+        <input type="radio" class="stv-radio-tab" name="radioTabTest" value="1" id="tab1" checked />
+        <label for="tab1">Tab 1</label>
+        <input type="radio" class="stv-radio-tab" name="radioTabTest" value="2" id="tab2" />
+        <label for="tab2">Tab 2</label>
+        <input type="radio" class="stv-radio-tab" name="radioTabTest" value="3" id="tab3" />
+        <label for="tab3">Tab 3</label>
+    </div>
 
 
-	<div class="header2">
 
-	</div>
-	</div>
-
-	<div class="container">
-		<div class="column">
-			<div class="row">
-				<div class="sideimage"> <img width=45% src="./images/people_microscope.jpg" alt=""> </div>
-			</div>
-
-		</div>
-
-		<div class="column">
-			<div class="row"><b>Membership: Access and Benefits</b>
-				<p>
-					If you are a member please use this link to login to the <a href="#Access">kartography portal.</a>
-
-				</p>
-				<p>
-					ResearchSpace membership.......
-
-
-				</p>
-
-			</div>
-
-		</div>
-
-
-	</div>
-	<div class="footer">
-		<p>(c) Kartography CIC 2023</p>
-		Kartography Community Interest Company is a private company limited by guarantee registered as a Community
-		Interest
-		Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
-
-		Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
-	</div>
 </body>
 
-</html>
+
+
+
