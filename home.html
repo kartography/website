@@ -6,178 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   <title>Kartography</title>
-  <style>
-    body {
-      margin-left: 10%;
-      margin-right: 10%;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    * {
-      border: 0px solid #ccc;
-    }
-
-    .sideimage {
-
-      text-align: right;
-      padding-bottom: 1%;
-      padding-right: 10%;
-      padding-top: 1%;
-
-
-    }
-
-    .title {
-
-      font-size: 5em;
-      text-align: center;
-
-    }
-
-    .subtitle {
-      text-align: center;
-      font-family: monospace;
-      font-size: 1.5em;
-    }
-
-
-    .header1 {
-      background-color: white;
-
-      padding: 0px;
-      margin: auto;
-      color: black;
-      width: 50%;
-    }
-
-    .header2 {
-      background-color: white;
-      color: white;
-      padding: 0px;
-      text-align: center;
-      color: black;
-    }
-
-    .container {
-      width: 95%;
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-
-      padding-top: 2%;
-    }
-
-    .column {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      padding: 0;
-
-
-      width: auto;
-
-    }
-
-    .row {
-
-      flex-wrap: wrap;
-      flex: 1;
-      text-align: left;
-      padding: 0;
-
-
-      font-family: monospace;
-      font-size: 1.5em;
-      margin: 1.25%;
-    }
-
-    .headerimage {
-      padding: 0;
-      margin-left: auto;
-      margin-right: auto;
-
-
-    }
-
-  
-
-    .whatis {
-      font-family: monospace;
-      text-align: left;
-
-    }
-
-    .nav {
-      font-size: 1em;
-      text-align: center;
-
-    }
-
-    .topnav {
-      display: flex;
-      justify-content: center;
-      padding-top: 2%;
-      font-family: monospace;
-
-
-
-    }
-
-    .topnav a {
-      float: left;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 1.25em;
-    }
-
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    a img
-{
-  border: 0 none;
-}
-.image-link
-{
-  text-decoration: none;
-}
-
-.footer
-{
-  font-size: 0.75em;
-  width:70%;
-  margin:auto;
-
-}
-  </style>
+  <link href="./css/new.css" rel="stylesheet" />
 </head>
- 
+
 <body>
   <div class="header1">
-    <div w3-include-html="content.html"></div>
-    <div class="title"><a href="home.html" class="image-link"><img src="./images/kartlogo1.png" width=60% alt=""><a></div>
+    <div class="title"><a href="home.html" class="image-link"><img src="./images/newlogo.png" width=30% alt=""></a></div>
     <div class="subtitle">The Home of ResearchSpace</div>
+
     <div class="topnav">
 
-      <a href="./home.html">Home</a>
-			<a href="./researchers.html">Academic Research</a>
-			<a href="./knowledge_organisations.html ">Knowledge Organisations</a>
+      <div data-title="Go to the home page"><a href="./home.html">Home Page</a></div>
+      <div data-title="Information for Researchers"><a href="./researchers.html">Academic Research</a></div>
+      <div data-title="ResearchSpace for organisations (commercial  or public) dependent on knowledge">
+        <a  href="./knowledge_organisations.html ">Knowledge Organisations</a></div>
 
-			<a href="./researchspace.html">ResearchSpace in detail</a>
+      <div data-title="How does ResearchSpace work"><a href="./researchspace.html">ResearchSpace in detail</a></div>
 
-			<a href="./membership.html">Membership</a>
-      <a href="./projects.html">Case Studies</a>
-			<a href="./about.html" class="split">About and Contact</a>
-      <a href="./gallery.html">Gallery</a>
+      <div data-title="Go to the home page"><a href="./membership.html">Membership</a></div>
+      <div data-title="Go to the home page"><a href="./projects.html">Case Studies</a></div>
+      <div data-title="Go to the home page"><a href="./about.html" class="split">About and Contact</a></div>
+      <div data-title="Go to the home page"><a href="./gallery.html">Gallery</a></div>
     </div>
+  
   </div>
 
 
@@ -187,25 +38,59 @@
   </div>
   </div>
   <div class="container">
+
     <div class="column">
       <div class="row">
-        <div class="sideimage"> <img width=45% src="./images/kartographymind.jpg" alt=""> </div>
-      </div>
-      <div class="row">
-        <div class="sideimage"><img width=45% src="./images/saturnbrain.jpg"></div>
-      </div>
-      <div class="row">
-        <div class="sideimage"><img width=45% src="./images/museumcogs.jpg" alt=""> </div>
+        <p>Saturn is the planet of knowledge and research because it denotes loniness and isolation.</p>
+        <p>But the rings of saturn radiate outwards in the possibility that knowledge
+          can reach out and provide interconnectedness.
+        </p>
+        <div class="leftimage"> <img src="./images/sebald.jpg" alt=""> </div>
+        <p><b>
+          <quote>"so often was I forced to change direction or strike out across country due to the
+            labyrinthine system of footpaths and the many places where a right of way marked on
+            the map had been ploughed up or was now overgrown."
+        </b> W.G. Sebald</quote>
+
+      </p>
       </div>
 
       <div class="row">
-        <div class="sideimage"><img width=45% src="./images/connection.jpg" alt=""></div>
+       
+      </div>
+
+      <div class="row">
+       
       </div>
       <div class="row">
-        <div class="sideimage"><img width=45% src="./images/micro-macro.jpg" alt=""></div>
+        <div> </div>
       </div>
       <div class="row">
-        <div class="sideimage"><img width=45% src="./images/transition.jpg" alt=""></div>
+        <div> </div>
+      </div>
+      <div class="row">
+        <div> </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="row">
+        <div class="middleimage"> <img src="./images/kartographymind.jpg" alt=""> </div>
+      </div>
+      <div class="row">
+        <div class="middleimage"><img src="./images/saturnbrain.jpg"></div>
+      </div>
+      <div class="row">
+        <div class="middleimage"><img src="./images/museumcogs.jpg" alt=""> </div>
+      </div>
+
+      <div class="row">
+        <div class="middleimage"><img src="./images/connection.jpg" alt=""></div>
+      </div>
+      <div class="row">
+        <div class="middleimage"><img src="./images/micro-macro.jpg" alt=""></div>
+      </div>
+      <div class="row">
+        <div class="middleimage"><img src="./images/transition.jpg" alt=""></div>
       </div>
     </div>
 
@@ -218,8 +103,10 @@
           analysis. It also includes specialisms like ethnography, anthropology,
           egyptology, conservation and conservation science,
           and art history. This allows Kartography, together with the ResearchSpace knowledge system developed by the
-          team, to add significant benefits to knowledge processes and projects providing interdisciplinary expertise. The Kartography
-          organisation is a Community Interest Company - a non-profit social enterprise.  <a href="./about.html">Click here to learn more.</a>
+          team, to add significant benefits to knowledge processes and projects providing interdisciplinary expertise.
+          The Kartography
+          organisation is a Community Interest Company - a non-profit social enterprise. <a href="./about.html">Click
+            here to learn more.</a>
         </p>
 
       </div>
@@ -228,14 +115,18 @@
         <p><b>What is ResearchSpace?</b></p>
         <p>ResearchSpace is a progressive alternative and successor to the database. It is a semantic knowledge base
           system
-          designed to support dyanmic knowledge processes and create meaningful data more closely aligned with our thinking and
-          reality. It can be used in research, within cultural heritage organisations and any other organisation for which
+          designed to support dyanmic knowledge processes and create meaningful data more closely aligned with our
+          thinking and
+          reality. It can be used in research, within cultural heritage organisations and any other organisation for
+          which
           dynamic knowledge building is an important part of its processes. ResearchSpace is an open source system with
-          10 years of research and development funded by the Mellon Foundation, New York and has significant overlaps with 
+          10 years of research and development funded by the Mellon Foundation, New York and has significant overlaps
+          with
           artificial intelligence but from a human curated perspective. </p>
 
         <p>ResearchSpace has been designed to address many of the problems associated with representing complex data
-          that databases are not designed to address. For more information about how ResearchSpace works <a href="./researchspace.html">
+          that databases are not designed to address. For more information about how ResearchSpace works <a
+            href="./researchspace.html">
             click here</a></p>
       </div>
 
@@ -243,11 +134,13 @@
         <p><b>Why are databases problematic for knowledge processes?</b></p>
         <p>Databases were not designed for complex semantic content. They were invented for the processing of
           commercial data used in supply chains. They had no need to include context because the scope of
-          use built into their design was relatively narrow. The need to integrate with other organisations was not a priority
+          use built into their design was relatively narrow. The need to integrate with other organisations was not a
+          priority
           at the time but as
           data integration became important for commercial processes databases created a problem even for the narrow
           types of data they processed. A huge amount of complexity is required to perform relatively simple
-          integrations. Databases are essentially static and functional. Without semantics content is fixed and reductive. An example is produced here.</p>
+          integrations. Databases are essentially static and functional. Without semantics content is fixed and
+          reductive. An example is produced here.</p>
       </div>
 
       <div class="row">
@@ -269,37 +162,42 @@
 
       <div class="row"><b>Why is ResearchSpace more effective than a database?</b>
 
-        <p>ResearchSpace solves some significant problems associated with databases, whether doing research or working in
-        a skilled knowledge environment dependent on changing information. Databases have static models and no formal
-        data semantics. They
-        are designed to control a particular static set of information in quantity. However, knowledge is not a
-        static concept. In both research and in many skilled jobs people are necessarily building knowledge far beyond
-        these static models. As such they start using other mechanisms to record that additional knowledge which is
-        more important to their work than that recorded by the database. This creates a significant overhead and
-        an inefficiency invisible to the organisation.</p>
+        <p>ResearchSpace solves some significant problems associated with databases, whether doing research or working
+          in
+          a skilled knowledge environment dependent on changing information. Databases have static models and no formal
+          data semantics. They
+          are designed to control a particular static set of information in quantity. However, knowledge is not a
+          static concept. In both research and in many skilled jobs people are necessarily building knowledge far beyond
+          these static models. As such they start using other mechanisms to record that additional knowledge which is
+          more important to their work than that recorded by the database. This creates a significant overhead and
+          an inefficiency invisible to the organisation.</p>
 
         <p>Information becomes fragmented which prevents individuals and organisations from working in an
-        effective and connected way, and building valuable knowledge which otherwise fades away. Peter Drucker the
-        organisational consultant
-        who coined the phrase knowledge society, said that: “If knowledge isn’t challenged to grow, it disappears fast.”
-        This is highly costly to all organisations
-        and projects.</p>
+          effective and connected way, and building valuable knowledge which otherwise fades away. Peter Drucker the
+          organisational consultant
+          who coined the phrase knowledge society, said that: “If knowledge isn’t challenged to grow, it disappears
+          fast.”
+          This is highly costly to all organisations
+          and projects.</p>
 
       </div>
       <div class="row"><b>How does kartography do?</b>
-          <p>Kartography helps you transition from the one dimensional database to a new digital 
-          environment in which a wider range of knowledge can be authored with greater context and diversity. 
-          It helps design systems that include parallel perspectives, argument and uncertainty, 
-          multi-layered causation (influence). This often goes hand in hand with reviewing and changing internal 
-          processes to represent greater collaboration within and across departments and with external partners and audiences.</p>
-          
-          <p>Kartography are experienced at creating flexible knowledge systems that grow and evolve as human working 
-          elvoves without the overhead of a traditional custom system. All the meaning and logic is in the data making it
+        <p>Kartography helps you transition from the one dimensional database to a new digital
+          environment in which a wider range of knowledge can be authored with greater context and diversity.
+          It helps design systems that include parallel perspectives, argument and uncertainty,
+          multi-layered causation (influence). This often goes hand in hand with reviewing and changing internal
+          processes to represent greater collaboration within and across departments and with external partners and
+          audiences.</p>
+
+        <p>Kartography are experienced at creating flexible knowledge systems that grow and evolve as human working
+          elvoves without the overhead of a traditional custom system. All the meaning and logic is in the data making
+          it
           easier to change the way ResearchSpace interacts and augments knowledge processes and work. </p>
 
-        <p>Kartography provides courses in how to change the way people work to make better use of the knowledge they produced. To 
-          radical change the relationship with information systems and to create data systems that eliminate bias and 
-          represent context that improves inclusivity. It also provides connected courses in the technicalities 
+        <p>Kartography provides courses in how to change the way people work to make better use of the knowledge they
+          produced. To
+          radical change the relationship with information systems and to create data systems that eliminate bias and
+          represent context that improves inclusivity. It also provides connected courses in the technicalities
           of the Semantic Web and Linked data wothout separating the technical processes from social context. </p>
 
       </div>
@@ -313,13 +211,13 @@
 
   </div>
   <div class="footer">
-<p>(c) Kartography CIC 2023</p>
-    Kartography Community Interest Company is a private company limited by guarantee registered as a Community Interest
-    Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
+		<p>(c) Kartography CIC 2023</p>
+			Kartography Community Interest Company is a non profit social enterprise private company limited by guarantee registered as a Community Interest
+			Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
+		
+			Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
+		  </div>
 
-    Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
-  </div>
-  
 </body>
 
 </html>

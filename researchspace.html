@@ -6,177 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
   <title>Kartography</title>
-  <style>
-    body {
-      margin-left: 10%;
-      margin-right: 10%;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-    }
-
-    * {
-      border: 0px solid #ccc;
-    }
-
-    .sideimage {
-
-      text-align: right;
-      padding-bottom: 1%;
-      padding-right: 10%;
-      padding-top: 1%;
-
-
-    }
-
-    .title {
-
-      font-size: 5em;
-      text-align: center;
-
-    }
-
-    .subtitle {
-      text-align: center;
-      font-family: monospace;
-      font-size: 1.5em;
-    }
-
-
-    .header1 {
-      background-color: white;
-
-      padding: 0px;
-      margin: auto;
-      color: black;
-      width: 50%;
-    }
-
-    .header2 {
-      background-color: white;
-      color: white;
-      padding: 0px;
-      text-align: center;
-      color: black;
-    }
-
-    .container {
-      width: 95%;
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-
-      padding-top: 2%;
-    }
-
-    .column {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      padding: 0;
-
-
-      width: auto;
-
-    }
-
-    .row {
-
-      flex-wrap: wrap;
-      flex: 1;
-      text-align: left;
-      padding: 0;
-
-
-      font-family: monospace;
-      font-size: 1.5em;
-      margin: 1.25%;
-    }
-
-    .headerimage {
-      padding: 0;
-      margin-left: auto;
-      margin-right: auto;
-
-
-    }
-
-  
-
-    .whatis {
-      font-family: monospace;
-      text-align: left;
-
-    }
-
-    .nav {
-      font-size: 1em;
-      text-align: center;
-
-    }
-
-    .topnav {
-      display: flex;
-      justify-content: center;
-      padding-top: 2%;
-      font-family: monospace;
-
-
-
-    }
-
-    .topnav a {
-      float: left;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 1.25em;
-    }
-
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    a img 
-{
-  border: 0 none;
-}
-.image-link
-{
-  text-decoration: none;
-}
-
-.footer
-{
-  font-size: 0.75em;
-  width:70%;
-  margin:auto;
-
-}
-  </style>
+  <link href="./css/new.css" rel="stylesheet" />
 </head>
 
 <body>
-	<div class="header1">
-		<div w3-include-html="content.html"></div>
-		<div class="title"><a href="home.html" class="image-link"><img src="./images/kartlogo1.png" width=60% alt=""><a></div>
-		<div class="subtitle">The Home of ResearchSpace</div>
-		<div class="topnav">
-	
-		  <a href="./home.html">Home</a>
-				<a href="./researchers.html">Academic Research</a>
-				<a href="./knowledge_organisations.html ">Knowledge Organisations</a>
-	
-				<a href="./researchspace.html">ResearchSpace in detail</a>
-	
-				<a href="./membership.html">Membership</a>
-				<a href="./about.html" class="split">About and Contact</a>
-		</div>
-	  </div>
+  <div class="header1">
+    <div class="title"><a href="home.html" class="image-link"><img src="./images/newlogo.png" width=30% alt=""></a></div>
+    <div class="subtitle">The Home of ResearchSpace</div>
+
+    <div class="topnav">
+
+      <div data-title="Go to the home page"><a href="./home.html">Home Page</a></div>
+      <div data-title="Information for Researchers"><a href="./researchers.html">Academic Research</a></div>
+      <div data-title="ResearchSpace for organisations (commercial  or public) dependent on knowledge">
+        <a  href="./knowledge_organisations.html ">Knowledge Organisations</a></div>
+
+      <div data-title="How does ResearchSpace work"><a href="./researchspace.html">ResearchSpace in detail</a></div>
+
+      <div data-title="Go to the home page"><a href="./membership.html">Membership</a></div>
+      <div data-title="Go to the home page"><a href="./projects.html">Case Studies</a></div>
+      <div data-title="Go to the home page"><a href="./about.html" class="split">About and Contact</a></div>
+      <div data-title="Go to the home page"><a href="./gallery.html">Gallery</a></div>
+    </div>
+  
+  </div>
 
 
 
@@ -187,51 +40,65 @@
 	</div>
 
 	<div class="container">
+
+	
 		<div class="column">
-			<div class="row">
-				<div class="sideimage"> <img width=45% src="./images/saturnbrain.jpg" alt=""> </div>
+			<div class="row";>
+        <div class="middleimage"> <img width=100% src="./images/paintingscreenweb.jpg" alt=""> </div>
 			</div>
 			<div class="row">
-				<div class="sideimage"> <img width=45% src="./images/saturn1.jpg" alt=""> </div>
+
 			</div>
 			<div class="row">
-				<div class="sideimage"> <img width=45% src="./images/saturn2.jpg" alt=""> </div>
+				
 			</div>
 			<div class="row">
-				<div class="sideimage"> <img width=45% src="./images/saturn3.jpg" alt=""> </div>
+			
 			</div>
 		</div>
 
 		<div class="column">
 			<div class="row"><b>The ResearchSpace System - Underlying Principles</b>
 				<p>
-				While ResearchSpace is a native Linked Data environment, Linked data is only a structute. 
-				ResearchSpace is cpncerned with the approach to content in a structured form. The key objectives
-				are to   	
-
-				</p>
-				<p>
-			
-
-
-				</p>
+				ResearchSpace is a native Linked Data environment. However,Linked data is only a structute. The key to 
+        the ResearchSpace Design is the way in which it deals with data. ResearchSpace is a response to
+        the need to represent complex data narratives (like those used in writing textual narrative) in way that
+        supports human networks of knowledge. It addresses the challenge of meaningful data at scale, integration 
+        of data through context, representing transformation of history of society, rather than static administrative
+        or reference records, and providing a far better basis for the use of AI.
+      </p>
 
 			</div>
-			<div class="row"><b>The ResearchSpace System - </b>
+			<div class="row"><b>The ResearchSpace System - Knowledge Patterns</b>
 				<p>
-					
-
+					A knowledge pattern is a template statement based on ontological committment which allows
+          relational statements to be added, retrieved or deleted from the knowledge base.   
 				</p>
 				<p>
-			
-
-
+			  These patterns can be simple, like one relational statement connecting one process to another. For example,
+        "An Influence - was manifest in - Activity". This pattern can be used with other simple patterns. Another
+        pattern might be - "Activity took place at Place". Alternatively, these two statement might be used together 
+        in one pattern, depending on the the focus of attention.  
 				</p>
+        <p>These patterns are used in many of the tools within ResearchSpace. The system comes with a large number of
+          precompiled patterns using the CIDOC CRM. The integrity of the CIDOC-CRM means that this auto generation can 
+          derived from the its robust logic, but this is not the case with all so ontologies.   
+        </p>
+
+
+
+
 
 			</div>
-			<div class="row"><b>The ResearchSpace System</b>
+			<div class="row"><b>The ResearchSpace System - Semantic Forms</b>
 				<p>
-					
+					ResearchSpace links together knowledge patterns to make larger patterns of information. Semantic forms
+          look like standard form inouts but support hierarchical authoring and multiple connections between information.
+          This makes semantic forms a more powerful data input tool because the connections are meaningful and 
+          interpretable by the both computer and human alike.
+          
+          Semantically driven data, allows for greater complexity, and this means that systems can support 
+          many differnt subjectand process areas in the same knowledge base - supporting collaborative working.
 
 				</p>
 				<p>
@@ -258,14 +125,13 @@
 
 </div>
 
-	<div class="footer">
-		<p>(c) Kartography CIC 2023</p>
-		Kartography Community Interest Company is a private company limited by guarantee registered as a Community
-		Interest
-		Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
-
-		Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
-	</div>
+<div class="footer">
+  <p>(c) Kartography CIC 2023</p>
+    Kartography Community Interest Company is a non profit social enterprise private company limited by guarantee registered as a Community Interest
+    Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
+  
+    Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
+    </div>
 </body>
 
 </html>
