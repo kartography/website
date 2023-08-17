@@ -12,7 +12,7 @@
     }
 
     * {
-      border: 0px solid #ccc;
+      border: 1px solid #ccc;
     }
 
     .sideimage {
@@ -46,7 +46,7 @@
 
         text-align: center;
         padding:0;
-        width: 55%;
+        width: 45%;
   
   
   
