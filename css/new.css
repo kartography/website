@@ -14,7 +14,7 @@
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
-  }
+  } 
 
   * {
     border: 0px solid #ccc;
@@ -44,7 +44,8 @@
     align-items: center;
    /* justify-content: center; */
     text-align: center;
-    padding: 0;
+    padding: 1;
+    width: auto;
 
 
 
@@ -53,8 +54,9 @@
 
   .middleimage img {
 
-
+    
     padding: 0;
+    padding-top: 5%;
     width: 60%;
 
 
@@ -122,7 +124,15 @@
     text-align: center;
     align-self: center;
     padding-top: 2%;
+    justify-content: stretch;
+
+    
+
   }
+
+
+
+
 
   .leftcolumn {
     display: flex;
@@ -136,11 +146,6 @@
     border-width: 3px;
     padding-right: 2%;
 
-
-
-
-
-
   }
 
   .middlecolumn {
@@ -148,7 +153,8 @@
     flex-direction: column;
     flex: 1;
     max-width: 30%;
-    padding: 1;
+    padding: 0;
+    width: auto;
 
 
 
@@ -173,6 +179,8 @@
     flex: 1;
     max-width: 30%;
     padding: 1;
+    width: auto;
+
 
   }
 
@@ -195,6 +203,7 @@
     flex: 1;
     text-align: left ;
     padding: 0;
+    
 
 
 
