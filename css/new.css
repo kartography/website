@@ -125,7 +125,7 @@
 
   .header1 {
     background-color: white;
-
+    align-content: ;
     padding: 0px;
     margin: auto;
     color: black;
@@ -147,7 +147,7 @@
 
     margin: 0;
     text-align: center;
-    align-self: center;
+    align-self: top;
     padding-top: 1%;
     justify-content: stretch;
 
