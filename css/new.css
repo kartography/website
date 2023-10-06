@@ -20,7 +20,7 @@
     border: 0px solid #ccc;
   } 
  
-  
+
   .sideimage {
 
     text-align: center;
@@ -150,7 +150,7 @@
   }
 
   .container {
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: row;
 
