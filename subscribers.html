@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <title>Kartography</title>
+  <link href="./css/new.css" rel="stylesheet" />
+</head>
+
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;}
+    
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+    
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    
+    .containerlogin {
+      padding: 16px;
+      width: 50%;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+    </style>
+
+
+
+<body>
+  <div class="header1">
+    <div class="title"><a href="index.html" class="image-link"><img src="./images/newlogo.png" width=30% alt=""></a>
+    </div>
+    <div class="subtitle">The Home of ResearchSpace
+<p>info@kartography.org</p>
+
+    </div>
+
+    <div class="topnav">
+
+      <div data-title="Go to the home page"><a href="./index.html">Home Page</a></div>
+      <div data-title="Information for Researchers"><a href="./researchers.html">Academic Research</a></div>
+      <div data-title="ResearchSpace for knowledge organisations (commercial  or public)">
+        <a href="./knowledge_organisations.html ">Knowledge Organisations</a>
+      </div>
+
+      <div data-title="How does ResearchSpace work"><a href="./researchspace.html">ResearchSpace in detail</a></div>
+
+      <!--<div data-title="Go to the home page"><a href="./membership.html">Membership</a></div>-->
+      <div data-title="Case Studies "><a href="./projects.html">Projects & Case Studies</a></div>
+      <div data-title="About kartography"><a href="./about.html" class="split">About and Contact</a></div>
+      <div data-title="ResearchSpace Gallery"><a href="./gallery.html">Gallery</a></div>
+      <div data-title="Published Papers & Archives"><a href="./papers.html">Papers & Archives</a></div>
+      <div data-title="Subscribers Login"><a href="./subscribers.html">Subscribers Login</a></div>
+      
+    </div>
+
+  </div>
+
+
+
+  <div class="header2">
+
+  </div>
+  </div>
+  <div class="container">
+
+    <div class="columnone">
+        <div class="row">
+          <div class="middleimage"> <img width=45% src="./images/thekey.png" alt=""> </div>
+       
+        
+          </div>
+          </div>
+  
+          <div class="columntwo">
+              <div class="row"><b>Subscribers Login</b>
+
+                <form action="nologin.html" method="post">
+                    
+                    <div class="containerlogin">
+                      <label for="uname"><b>Username</b></label>
+                      <input type="text" placeholder="Enter Username" name="uname" required>
+                  
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                          
+                      <button type="submit">Login</button>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                    </div>
+                  
+                    <div class="containerlogin" style="background-color:#f1f1f1">
+                      <button type="button" class="cancelbtn">Cancel</button>
+                      <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                  </form>
+
+            </div>
+
+            </div>
+
+
+
+
+  </div>
+  <div class="footer">
+    <p>(c) Kartography CIC 2023</p>
+    Kartography Community Interest Company is a non profit social enterprise private company limited by guarantee
+    registered as a Community Interest
+    Company in England and Wales with company registration number 13275301. VAT-ID: GB379165359
+
+    Registered office address is 27 Old Gloucester Street, London, United Kingdom, WC1N 3AX.
+   
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
