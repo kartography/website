@@ -156,7 +156,6 @@ a:hover {
     text-align: center;
     padding: 0;
     padding-top: 10%;
-  
     width: auto;
     margin-left:10%;
     margin-right:10%;
@@ -171,7 +170,7 @@ a:hover {
     
     padding: 0;
     padding-top: 0%;
-    width: 90%;
+    width: 50%;
  
 
 
@@ -312,7 +311,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 50%;
+    width: 60%;
 
   }
 
@@ -673,7 +672,7 @@ a:hover {
       
       padding: 0;
       padding-top: 0%;
-      width: 80%;
+      width: 50%;
    
   
   
@@ -785,7 +784,7 @@ a:hover {
       flex: 1;
       padding-left: 0%;
       padding-right: 0%;
-      max-width: 100%;
+      max-width: 20%;
       
    
   
@@ -795,7 +794,7 @@ a:hover {
       display: flex;
       flex-direction: column;
       flex: 1;
-      max-width: 30%;
+      max-width: 20%;
       text-align: center;
       padding-left: 0%;
       padding-right: 0%;
@@ -817,7 +816,7 @@ a:hover {
       display: flex;
       flex-direction: column;
       flex: 1;
-      width: auto;
+      width: 60%;
   
     }
   
