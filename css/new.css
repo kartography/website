@@ -88,7 +88,19 @@ a:hover {
 
 
 
+.newshead h3 {
+  font-family: monospace;
+  font-size: 2em;
+  animation: color-change 1s infinite;
+}
 
+@keyframes color-change {
+  0% { color: red; }
+  25% { color: yellow; }
+  50% { color: blue; }
+  70% { color: green; }
+  100% { color: red; }
+}
 
 
 
