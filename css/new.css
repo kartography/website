@@ -89,8 +89,7 @@ a:hover {
 
 
 .newshead h3 {
-  font-family: monospace;
-  font-size: 2em;
+  
   animation: color-change 1s infinite;
 }
 
