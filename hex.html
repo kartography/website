@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hex Sticker Wall</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hex-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: -30px; /* prevent vertical spacing */
+    }
+
+    .hex-row {
+      display: flex;
+    }
+
+    .hex-row:nth-child(even) {
+      margin-left: 65px; /* offset even rows for staggering */
+    }
+
+    .hex {
+      width: 300px;
+      height: 300px;
+      margin: 10px; /* overlap the edges */
+      background-color: #4A90E2;
+      clip-path: polygon(
+        50% 0%,
+        93% 25%,
+        93% 75%,
+        50% 100%,
+        7% 75%,
+        7% 25%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.3s;
+      cursor: pointer;
+    }
+
+    .hex:hover {
+      background-color: #357ABD;
+      transform: scale(1.05);
+    }
+
+    .hex span {
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      .hex {
+        width: 80px;
+        height: 92px;
+        margin: -10px;
+      }
+
+      .hex-row:nth-child(even) {
+        margin-left: 45px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hex-container">
+    <div class="hex-row">
+      <div class="hex"><span>HTML</span></div>
+      <div class="hex"><span>CSS</span></div>
+      <div class="hex"><span>JavaScript</span></div>
+    
+    </div>
+    <div class="hex-row">
+      <div class="hex"><span>Node</span></div>
+      <div class="hex"><span>Vue</span></div>
+      <div class="hex"><span>MongoDB</span></div>
+    </div>
+    <div class="hex-row">
+      <div class="hex"><span>API</span></div>
+      <div class="hex"><span>Git</span></div>
+      <div class="hex"><span>Docker</span></div>
+    
+    </div>
+  </div>
+
+</body>
+</html>
