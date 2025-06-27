@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartography CIC</title>
     <style>
+        @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center; /* Center items including logo */
+    gap: 1rem;
+  }
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-container img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro p,
+  .card p {
+    font-size: 1rem;
+  }
+
+  #researchspace h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
