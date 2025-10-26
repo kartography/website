@@ -6,24 +6,8 @@
   <title>ResearchSpace Systems – Kartography</title>
   <style>
     body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; background:#f8f9fb; color:#222; }
-    
-    /* --- INDEX STYLE HEADER --- */
-    header {
-      background:#004080;
-      color:#fff;
-      text-align:center;
-      padding:4rem 2rem 2rem;
-    }
-    header h1 {
-      font-size:3rem;
-      margin:0.5rem 0;
-    }
-    header p.subtitle {
-      font-size:1.2rem;
-      margin:0;
-      font-style:italic;
-      opacity:0.85;
-    }
+
+    header h1, header p.subtitle { color:#fff; }
 
     main {
       max-width:1000px;
@@ -72,15 +56,24 @@
 
     @media(max-width:700px) { 
       .carousel-container { height:300px; } 
+      header { flex-direction:column; text-align:center; gap:1rem; }
+      header img { height:60px; }
       header h1 { font-size:2rem; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>ResearchSpace Systems</h1>
-  <p class="subtitle">Examples of knowledge environments designed by Kartography</p>
+<header style="display:flex; align-items:center; justify-content:center; gap:2rem; background:#004080; color:#fff; padding:2rem 2rem;">
+  <a href="index.html">
+    <img src="images/modern1_upscaled.png" alt="Kartography logo" style="height:80px; width:auto;">
+  </a>
+  <div style="text-align:left;">
+    <h1 style="margin:0; font-size:3rem;">ResearchSpace Systems</h1>
+    <p class="subtitle" style="font-size:1.2rem; margin:0; font-style:italic; opacity:0.85;">
+      Examples of knowledge environments designed by Kartography
+    </p>
+  </div>
 </header>
 
 <main>
@@ -109,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Hokusai Knowledge System and Public Interface",
     "Transciplinary National Archives Collection Care System",
     "Analysing the Provenance of West African Bronzes",
-    "archaeological research at Amara West, Sudan"
+    "Archaeological research at Amara West, Sudan"
   ];
   const captionEl = document.getElementById('caption');
   const prevBtn = document.querySelector('.carousel-btn.prev');
