@@ -52,48 +52,61 @@
             background-color: #f5f8fa;
             color: #1f2d3d;
         }
-        header {
-            background-color: #ffffff;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: relative;
-        }
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-        }
-        header img {
-           
-            width:20%;
-        }
-        nav {
-            position: absolute;
-            left: 2rem;
-            top: 1.5rem;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #1f2d3d;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #007acc;
-        }
+header {
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column; /* stack center content and nav */
+  align-items: center;    /* center everything horizontally */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-center {
+  text-align: center;  /* center logo + tagline */
+  margin-bottom: 1.5rem; /* space between text and menu */
+}
+
+.logo-container img {
+  height: 200px;
+  width: auto;
+  display: block;
+  margin: 0 auto; /* center image */
+}
+
+.tagline h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 0.5rem 0;
+  color: #1f2d3d;
+}
+
+.tagline p {
+  margin: 0;
+  max-width: 800px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #34495e;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1f2d3d;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007acc;
+}
+
         .intro {
             padding: 4rem 2rem;
             max-width: 800px;
@@ -101,8 +114,9 @@
             text-align: center;
         }
         .intro h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            text-align: center;
         }
         .intro p {
             font-size: 1.2rem;
@@ -149,29 +163,48 @@
             padding: 1rem 2rem;
             margin-top: 4rem;
         }
+        .video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.video-wrapper {
+    flex: 1 1 400px;
+    max-width: 420px;
+}
+
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#researchspace">ResearchSpace</a></li>
-                <li><a href="#about">About Us</a></li>
-               <!-- <li><a href="http://kartography.org/news.html">News</a></li>
-                <li><a href="#case">Case Studies</a></li>-->
-                <li><a href="http://kartography.org/privacy.html">Privacy Policy</a></li>
-            </ul>
-        </nav>
-        <div class="logo-container">
-            <img src="images/modern1_upscaled.png" alt="Kartography CIC Logo">
-        </div>
-    </header>
+   <header>
+  <div class="header-center">
+    <div class="logo-container">
+      <img src="images/modern1_upscaled.png" alt="Kartography CIC Logo">
+    </div>
+    <div class="tagline">
+      <h1>Mapping Minds, Bridging Worlds</h1>
+      <p>At Kartography CIC, we explore the intersections and interdependencies of the humanities and sciences—creating knowledge through practice and research, processual analysis, and innovation. We believe that data and meaning go hand in hand, and that real insight comes from collaboration across disciplines.</p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#researchspace">ResearchSpace</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="Thoughtful_Design.html">Design Approach</a></li>
+      <li><a href="examples.html">ResearchSpace Examples</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section class="intro">
+
+   <!-- <section class="intro">
         <h2>Mapping Minds, Bridging Worlds</h2>
         <p>At Kartography CIC, we explore the intersections and interdepencies of the humanities and sciences—creating knowledge through practice and research, processual analysis, and innovation. We believe that data and meaning go hand in hand, and that real insight comes from collaboration across disciplines.</p>
     </section>
-
+  -->
     <section class="sections">
         <div class="card">
             <h3>Humanities</h3>
@@ -239,6 +272,20 @@
           </p>
         
     </section>
+
+    <section id="videos" style="max-width: 900px; margin: 4rem auto; padding: 2rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">YouTube Videos</h2>
+        <div class="video-grid">
+          <div class="video-wrapper">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/rTl-XwM_eBw?si=6e2vu1XGdnukc0DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            ResearchSpace Relational Frame System
+          </div>
+          <div class="video-wrapper">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" title="YouTube video 2" frameborder="0" allowfullscreen></iframe>
+            ResearchSpace Overview Video
+          </div>
+        </div>
+      </section>
 
     <footer>
         &copy; 2025 Kartography CIC &mdash; Uniting Humanities and Science

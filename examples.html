@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ResearchSpace Systems – Kartography</title>
+  <style>
+    body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; background:#f8f9fb; color:#222; }
+    
+    /* --- INDEX STYLE HEADER --- */
+    header {
+      background:#004080;
+      color:#fff;
+      text-align:center;
+      padding:4rem 2rem 2rem;
+    }
+    header h1 {
+      font-size:3rem;
+      margin:0.5rem 0;
+    }
+    header p.subtitle {
+      font-size:1.2rem;
+      margin:0;
+      font-style:italic;
+      opacity:0.85;
+    }
+
+    main {
+      max-width:1000px;
+      margin:2rem auto 4rem;
+      background:#fff;
+      padding:2rem;
+      border-radius:12px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Carousel */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      margin: 0 auto 2rem;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+    }
+    .carousel-slide img {
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      z-index:0;
+      transition: opacity 1s ease-in-out;
+      pointer-events:none;
+    }
+    .carousel-slide img.active {
+      opacity:1;
+      z-index:1;
+      pointer-events:auto;
+    }
+    .carousel-caption { text-align:center; margin-top:.75rem; font-size:.95rem; color:#555; min-height:1.5em; }
+    .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; font-size:2rem; cursor:pointer; padding:.4rem .9rem; border-radius:50%; box-shadow:0 0 6px rgba(0,0,0,0.2); z-index:2; }
+    .carousel-btn:hover { background:#fff; }
+    .prev { left:12px; }
+    .next { right:12px; }
+
+    footer { text-align:center; padding:2rem; color:#777; font-size:.9rem; }
+
+    @media(max-width:700px) { 
+      .carousel-container { height:300px; } 
+      header h1 { font-size:2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ResearchSpace Systems</h1>
+  <p class="subtitle">Examples of knowledge environments designed by Kartography</p>
+</header>
+
+<main>
+  <div class="carousel-container">
+    <div class="carousel-slide" id="carousel">
+      <img src="images/latehokusai.jpg" alt="Hokusai Knowledge System and Public Interface" class="active">
+      <img src="images/The National archives.jpg" alt="The Transdiciplinary National Archives Collection Care System">
+      <img src="images/lower niger bronzes.jpg" alt="The Provenance of West African Bronzes">
+      <img src="images/amarawest.jpg" alt="Archaeology site in Sudan">
+    </div>
+    <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+    <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+  </div>
+
+  <div class="carousel-caption" id="caption">Hokusai Knowledge System and Public Interface</div>
+
+  <p>These examples illustrate how ResearchSpace systems can support diverse domains — from art history to science, archaeology, and museum collections — enabling collaboration, insight, and discovery through shared semantic frameworks.</p>
+</main>
+
+<footer>© 2025 Kartography CIC · Exploring the intersections of humanities and science</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const imgs = Array.from(document.querySelectorAll('.carousel-slide img'));
+  const captions = [
+    "Hokusai Knowledge System and Public Interface",
+    "Transciplinary National Archives Collection Care System",
+    "Analysing the Provenance of West African Bronzes",
+    "archaeological research at Amara West, Sudan"
+  ];
+  const captionEl = document.getElementById('caption');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+
+  let index = imgs.findIndex(img => img.classList.contains('active'));
+  if(index===-1) index=0;
+
+  function showImage(i){
+    imgs.forEach((img, idx)=>{
+      img.classList.toggle('active', idx===i);
+      img.style.zIndex = idx===i ? 1 : 0;
+    });
+    captionEl.textContent = captions[i] || imgs[i].alt || '';
+  }
+
+  function clampIndex(n){ return ((n % imgs.length)+imgs.length)%imgs.length; }
+  function nextImage(){ index = clampIndex(index+1); showImage(index); }
+  function prevImage(){ index = clampIndex(index-1); showImage(index); }
+
+  if(nextBtn) nextBtn.addEventListener('click',()=>{ nextImage(); resetAuto(); });
+  if(prevBtn) prevBtn.addEventListener('click',()=>{ prevImage(); resetAuto(); });
+
+  document.addEventListener('keydown', e=>{
+    if(e.key==='ArrowLeft'){ prevImage(); resetAuto(); }
+    if(e.key==='ArrowRight'){ nextImage(); resetAuto(); }
+  });
+
+  let interval=null;
+  function startAuto(){ interval=setInterval(nextImage,6000); }
+  function stopAuto(){ clearInterval(interval); }
+  function resetAuto(){ stopAuto(); startAuto(); }
+
+  showImage(index);
+  startAuto();
+
+  const container=document.querySelector('.carousel-container');
+  if(container){
+    container.addEventListener('mouseenter', stopAuto);
+    container.addEventListener('mouseleave', startAuto);
+  }
+});
+</script>
+
+</body>
+</html>
