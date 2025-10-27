@@ -1,294 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartography CIC</title>
-    <style>
-        @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center; /* Center items including logo */
-    gap: 1rem;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartography CIC</title>
+  <style>
+    /* -------------------------
+       GLOBAL STYLES
+    -------------------------- */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      color: #1f2d3d;
+    }
 
-  .logo-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+    /* -------------------------
+       HEADER LAYOUT
+    -------------------------- */
+    header {
+      background-color: #ffffff;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-  .logo-container img {
-    max-width: 120px;
-    height: auto;
-  }
+    .header-center {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    width: 100%;
-    padding-top: 0.5rem;
-  }
+    /* ✅ Responsive logo that scales properly */
+    .logo-container img {
+      display: block;
+      width: auto;
+      max-width: 240px;       /* keeps it from growing too large */
+      height: auto;
+      max-height: 18vh;       /* scales with viewport height */
+      margin: 0 auto;
+    }
 
-  .intro h2 {
-    font-size: 1.6rem;
-  }
+    .tagline h1 {
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+      color: #1f2d3d;
+    }
 
-  .intro p,
-  .card p {
-    font-size: 1rem;
-  }
+    .tagline p {
+      margin: 0;
+      max-width: 800px;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      color: #34495e;
+    }
 
-  #researchspace h2 {
-    font-size: 1.5rem;
-  }
-}
+    /* -------------------------
+       NAVIGATION
+    -------------------------- */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      font-size: 1.3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
+    nav ul li a {
+      text-decoration: none;
+      color: #1f2d3d;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f8fa;
-            color: #1f2d3d;
-        }
-header {
-  background-color: #ffffff;
-  padding: 1rem 1.5rem;
-  display: flex;
-  flex-direction: column; /* stack center content and nav */
-  align-items: center;    /* center everything horizontally */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    nav ul li a:hover {
+      color: #007acc;
+    }
 
-.header-center {
-  text-align: center;  /* center logo + tagline */
-  margin-bottom: 1.5rem; /* space between text and menu */
-}
+    /* -------------------------
+       INTRO + CARDS
+    -------------------------- */
+    .intro {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
 
-.logo-container img {
-  height: 200px;
-  width: auto;
-  display: block;
-  margin: 0 auto; /* center image */
-}
+    .intro h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-.tagline h1 {
-  font-size: 1.8rem;
-  margin: 0.5rem 0 0.5rem 0;
-  color: #1f2d3d;
-}
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
 
-.tagline p {
-  margin: 0;
-  max-width: 800px;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: #34495e;
-}
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-  font-size: 1.3rem;
-}
+    .card {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #1f2d3d;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+    .card h3 {
+      margin-top: 0;
+    }
 
-nav ul li a:hover {
-  color: #007acc;
-}
+    /* -------------------------
+       RESEARCHSPACE SECTION
+    -------------------------- */
+    #researchspace {
+      background-color: #ffffff;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 4rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
 
-        .intro {
-            padding: 4rem 2rem;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
-        .intro h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        .intro p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        .sections {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .card {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-        .card h3 {
-            margin-top: 0;
-        }
-        #researchspace {
-            background-color: #ffffff;
-            padding: 4rem 2rem;
-            max-width: 900px;
-            margin: 4rem auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        #researchspace h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        #researchspace p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-        footer {
-            background-color: #1f2d3d;
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem 2rem;
-            margin-top: 4rem;
-        }
-        .video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
+    #researchspace h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-.video-wrapper {
-    flex: 1 1 400px;
-    max-width: 420px;
-}
+    #researchspace p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
 
-    </style>
+    /* -------------------------
+       VIDEOS
+    -------------------------- */
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .video-wrapper {
+      flex: 1 1 400px;
+      max-width: 420px;
+    }
+
+    /* -------------------------
+       FOOTER
+    -------------------------- */
+    footer {
+      background-color: #1f2d3d;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem 2rem;
+      margin-top: 4rem;
+    }
+
+    /* -------------------------
+       RESPONSIVE RULES
+    -------------------------- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* ✅ Scales logo safely on mobile portrait */
+      .logo-container img {
+        max-width: clamp(90px, 35vw, 160px);
+        height: auto;
+        max-height: 16vh;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
+        padding-top: 0.5rem;
+      }
+
+      .intro h2 {
+        font-size: 1.6rem;
+      }
+
+      .intro p,
+      .card p {
+        font-size: 1rem;
+      }
+
+      #researchspace h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-   <header>
-  <div class="header-center">
-    <div class="logo-container">
-      <img src="images/modern1_upscaled.png" alt="Kartography CIC Logo">
+  <header>
+    <div class="header-center">
+      <div class="logo-container">
+        <img src="images/modern1_upscaled.png" alt="Kartography CIC Logo">
+      </div>
+      <div class="tagline">
+        <h1>Mapping Minds, Bridging Worlds</h1>
+        <p>At Kartography CIC, we explore the intersections and interdependencies of the humanities and sciences—creating knowledge through practice and research, processual analysis, and innovation. We believe that data and meaning go hand in hand, and that real insight comes from collaboration across disciplines.</p>
+      </div>
     </div>
-    <div class="tagline">
-      <h1>Mapping Minds, Bridging Worlds</h1>
-      <p>At Kartography CIC, we explore the intersections and interdependencies of the humanities and sciences—creating knowledge through practice and research, processual analysis, and innovation. We believe that data and meaning go hand in hand, and that real insight comes from collaboration across disciplines.</p>
+    <nav>
+      <ul>
+        <li><a href="#researchspace">ResearchSpace</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="Thoughtful_Design.html">Design Approach</a></li>
+        <li><a href="examples.html">ResearchSpace Examples</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="sections">
+    <div class="card">
+      <h3>Humanities</h3>
+      <p>Our systems delve into history and society to inform how we see the present and imagine the future. Through historical research, creative media, and participatory projects, we bring human and social reality to the forefront.</p>
     </div>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#researchspace">ResearchSpace</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="Thoughtful_Design.html">Design Approach</a></li>
-      <li><a href="examples.html">ResearchSpace Examples</a></li>
+    <div class="card">
+      <h3>Science & Data</h3>
+      <p>We use semantic data, cognitive mapping, and processual thinking to analyze complex challenges. Synthesising different space-times, levels of generality and vantage points, we apply scientific digital tools to support informed interpretation and decision-making.</p>
+    </div>
+    <div class="card">
+      <h3>Community Engagement</h3>
+      <p>Our projects are rooted in the communities we serve. We prioritize co-design, accessibility, and equity in all our work, ensuring that everyone has a voice in shaping the knowledge we build together.</p>
+    </div>
+  </section>
+
+  <section id="about" class="card" style="max-width: 900px; margin: 4rem auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">About Kartography</h2>
+    <p><strong>Kartography</strong> is a consultancy specialising in the design and implementation of semantic knowledge bases.
+      We help organisations transform how they structure, connect, and use information—aligning technology with real-world knowledge processes.</p>
+    <p>Whether building from scratch or evolving existing systems, we create dynamic, adaptable platforms that support research,
+      decision-making, education, and collaboration. Our open-source <strong>ResearchSpace</strong> system breaks from rigid data models,
+      enabling meaningful, flexible knowledge base systems.</p>
+    <p>Our team brings deep interdisciplinary experience—from ethnography to conservation science—shaped by work with institutions like the
+      British Museum, National Gallery, and Royal Academy of Arts. We understand how humanities and social science research operates,
+      and we use that insight to craft digital tools that reflect how people actually think and work.</p>
+    <p><strong>We offer:</strong></p>
+    <ul style="margin-left: 1rem; padding-left: 1rem; line-height: 1.6;">
+      <li>Custom knowledge base design and implementation</li>
+      <li>Process analysis and workflow modelling</li>
+      <li>Semantic interface development</li>
+      <li>Training in linked data and knowledge representation</li>
+      <li>Ongoing support and project partnership</li>
     </ul>
-  </nav>
-</header>
+    <p>Kartography is the original development team behind <strong>ResearchSpace</strong>, a semantic platform shaped by over a decade of
+      critical research into digital methods in the humanities. Our goal is simple: empower users to build knowledge, not just manage data.</p>
+    <p style="text-align: center; margin-top: 2rem; font-weight: bold;">
+      📧 Contact us: <a href="mailto:info@kartography.org">info@kartography.org</a>
+    </p>
+  </section>
 
+  <section id="researchspace">
+    <h2>ResearchSpace Semantic Web Platform: A Living Knowledge Process</h2>
+    <p><strong>ResearchSpace</strong> is not just a digital platform — it is a dynamic process of sense-making, designed to evolve alongside the inquiries and communities it serves. Rooted in material processual principles, and supported by CIDOC CRM, ResearchSpace facilitates the transformation of historical evidence into contextualised knowledge in a native Linked Data format.</p>
+    <p>From a processual perspective, ResearchSpace operates through the following core phases:</p>
+    <ul>
+      <li><strong>Expert Authoring:</strong> Primary materials—oral histories, images, texts, and data—are carefully introduced into the system, not as static records, but as evolving patterns of human experience.</li>
+      <li><strong>Annotation and Interpretation:</strong> Experts and collaborators contribute interpretations, link entities, and express uncertainty and develop arguments. Meaning is layered allowing for contradiction to coexist with a wish for dialectic resolution.</li>
+      <li><strong>Semantic Connections:</strong> Relationships between people, events, places, and concepts are made explicit using a shared ontology (CIDOC CRM). These links do not freeze knowledge but express how and why elements relate across time and context.</li>
+      <li><strong>Reconfiguration:</strong> As projects develop or new perspectives emerge, previous interpretations can be revisited. ResearchSpace supports this recursive process—knowledge is always provisional, always subject to refinement.</li>
+      <li><strong>Engagement and Circulation:</strong> Outputs are not endpoints. Whether in exhibitions, publications, or participatory storytelling, the knowledge modeled in ResearchSpace is re-expressed to new audiences, inviting feedback, re-use, and dialogue.</li>
+    </ul>
+    <p style="text-align: center; margin-top: 2rem; font-weight: bold;">
+      <a href="http://researchspace.org">Link to researchspace.org</a>
+    </p>
+  </section>
 
-   <!-- <section class="intro">
-        <h2>Mapping Minds, Bridging Worlds</h2>
-        <p>At Kartography CIC, we explore the intersections and interdepencies of the humanities and sciences—creating knowledge through practice and research, processual analysis, and innovation. We believe that data and meaning go hand in hand, and that real insight comes from collaboration across disciplines.</p>
-    </section>
-  -->
-    <section class="sections">
-        <div class="card">
-            <h3>Humanities</h3>
-            <p>Our systems delve into history and society to inform how we see the present and imagine the future. Through historical research, creative media, and participatory projects, we bring human and social reality to the forefront.</p>
-        </div>
-        <div class="card">
-            <h3>Science & Data</h3>
-            <p>We use semantic data, cognitive mapping, and processual thinking to analyze complex challenges. Synthesising different space-times, levels of generality and vantage points, we apply scientific digital tools to support informed interpretation and decision-making.</p>
-        </div>
-        <div class="card">
-            <h3>Community Engagement</h3>
-            <p>Our projects are rooted in the communities we serve. We prioritize co-design, accessibility, and equity in all our work, ensuring that everyone has a voice in shaping the knowledge we build together.</p>
-        </div>
-    </section>
+  <section id="videos" style="max-width: 900px; margin: 4rem auto; padding: 2rem;">
+    <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">YouTube Videos</h2>
+    <div class="video-grid">
+      <div class="video-wrapper">
+        <embed width="100%" height="315" src="https://www.youtube.com/embed/rTl-XwM_eBw?si=6e2vu1XGdnukc0DI" allowfullscreen></embed>
+        ResearchSpace Relational Frame System
+      </div>
+      <div class="video-wrapper">
+        <embed width="100%" height="315" src="https://www.youtube.com/embed/MaAv0SE7wis?si=cKWeUCXsVFadiZx0" allowfullscreen></embed>
+        ResearchSpace Overview Video
+      </div>
+    </div>
+  </section>
 
-
-
-    <section id="about" class="card" style="max-width: 900px; margin: 4rem auto;">
-        <h2 style="font-size: 2rem; margin-bottom: 1rem; text-align: center;">About Kartography</h2>
-        <p>
-          <strong>Kartography</strong> is a consultancy specialising in the design and implementation of semantic knowledge bases.
-          We help organisations transform how they structure, connect, and use information—aligning technology with real-world knowledge processes.
-        </p>
-        <p>
-          Whether building from scratch or evolving existing systems, we create dynamic, adaptable platforms that support research,
-          decision-making, education, and collaboration. Our open-source <strong>ResearchSpace</strong> system breaks from rigid data models,
-          enabling meaningful, flexible knowledge base systems.
-        </p>
-        <p>
-          Our team brings deep interdisciplinary experience—from ethnography to conservation science—shaped by work with institutions like the
-          British Museum, National Gallery, and Royal Academy of Arts. We understand how humanities and social science research operates,
-          and we use that insight to craft digital tools that reflect how people actually think and work.
-        </p>
-        <p><strong>We offer:</strong></p>
-        <ul style="margin-left: 1rem; padding-left: 1rem; line-height: 1.6;">
-          <li>Custom knowledge base design and implementation</li>
-          <li>Process analysis and workflow modelling</li>
-          <li>Semantic interface development</li>
-          <li>Training in linked data and knowledge representation</li>
-          <li>Ongoing support and project partnership</li>
-        </ul>
-        <p>
-          Kartography is the original development team behind <strong>ResearchSpace</strong>, a semantic platform shaped by over a decade of
-          critical research into digital methods in the humanities. Our goal is simple: empower users to build knowledge, not just manage data.
-        </p>
-        <p style="text-align: center; margin-top: 2rem; font-weight: bold;">
-          📧 Contact us: <a href="mailto:info@kartography.org">info@kartography.org</a>
-        </p>
-      </section>
-
-    <section id="researchspace">
-        <h2>ResearchSpace Semantic Web Platform: A Living Knowledge Process</h2>
-        <p><strong>ResearchSpace</strong> is not just a digital platform — it is a dynamic process of sense-making, designed to evolve alongside the inquiries and communities it serves. Rooted in the material processual principles, and supported by CIDOC CRM, ResearchSpace facilitates the transformation of historical evidence into contextualised knowledge in a native Linked Data format.</p>
-        <p>From a processual perspective, ResearchSpace operates through the following core phases:</p>
-        <ul>
-            <li><strong>Expert Authoring:</strong> Primary materials—oral histories, images, texts, and data—are carefully introduced into the system, not as static records, but as evolving patterns of human experience.</li>
-            <li><strong>Annotation and Interpretation:</strong> Experts and collaborators contribute interpretations, link entities, and express uncertainty and develop arguments. Meaning is layered allowing for contradiction to coexist with a with to dialectic resolution.</li>
-            <li><strong>Semantic Connections:</strong> Relationships between people, events, places, and concepts are made explicit using a shared ontology (CIDOC CRM). These links do not freeze knowledge but express how and why elements relate across time and context.</li>
-            <li><strong>Reconfiguration:</strong> As projects develop or new perspectives emerge, previous interpretations can be revisited. ResearchSpace supports this recursive process—knowledge is always provisional, always subject to refinement.</li>
-            <li><strong>Engagement and Circulation:</strong> Outputs are not endpoints. Whether in exhibitions, publications, or participatory storytelling, the knowledge modeled in ResearchSpace is re-expressed to new audiences, inviting feedback, re-use, and dialogue.</li>
-        </ul>
-        <p>This approach emphasizes that knowledge is not a <em>product</em>, but a <em>practice</em>. ResearchSpace supports that practice by acting as a <em>temporal scaffold</em>—a structure that adapts to changing insights, collaborative contributions, and the rhythms of long-term socio-historical research.</p>
-        <p style="text-align: center; margin-top: 2rem; font-weight: bold;">
-            <a href="http://researchspace.org">Link to researchspace.org</a>
-          </p>
-        
-    </section>
-
-    <section id="videos" style="max-width: 900px; margin: 4rem auto; padding: 2rem;">
-        <h2 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">YouTube Videos</h2>
-        <div class="video-grid">
-          <div class="video-wrapper">
-            <embed width="100%" height="315" src="https://www.youtube.com/embed/rTl-XwM_eBw?si=6e2vu1XGdnukc0DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed>
-            ResearchSpace Relational Frame System
-          </div>
-          <div class="video-wrapper">
-           <embed width="560" height="315" src="https://www.youtube.com/embed/MaAv0SE7wis?si=cKWeUCXsVFadiZx0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></embed>
-            ResearchSpace Overview Video
-          </div>
-        </div>
-      </section>
-
-    <footer>
-        &copy; 2025 Kartography CIC &mdash; Uniting Humanities and Science
-    </footer>
+  <footer>
+    &copy; 2025 Kartography CIC &mdash; Uniting Humanities and Science
+  </footer>
 </body>
 </html>
